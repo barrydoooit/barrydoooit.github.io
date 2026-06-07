@@ -208,7 +208,7 @@ async function loadGithubCommitCount() {
   const generatedStats = await loadGeneratedGithubStats();
 
   if (generatedStats) {
-    applyGithubCommitCount(generatedStats.commitCountLast30Days, "commits / 30d");
+    applyGithubCommitCount(generatedStats.commitCountLast30Days, "commits / 1m");
     return;
   }
 
@@ -242,7 +242,7 @@ function applyGithubCommitCount(count, label) {
 
 function showGithubStatsPending() {
   githubCommitValue.textContent = "--";
-  githubCommitLabel.textContent = "commits / 30d";
+  githubCommitLabel.textContent = "commits / 1m";
 }
 
 function revealEmailButton() {

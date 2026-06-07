@@ -1543,6 +1543,16 @@ h2 {
     min-width: 76px;
   }
 
+  .email-button[data-email-state="revealed"],
+  .email-button[data-email-state="copied"] {
+    min-width: 76px;
+  }
+
+  .email-button[data-email-state="revealed"] .email-copy-ui,
+  .email-button[data-email-state="copied"] .email-copy-ui {
+    display: none;
+  }
+
   .hero-actions .share-button.primary-pill {
     min-width: 92px;
   }
@@ -1700,6 +1710,16 @@ h2 {
 
   .email-button {
     min-width: 70px;
+  }
+
+  .email-button[data-email-state="revealed"],
+  .email-button[data-email-state="copied"] {
+    min-width: 70px;
+  }
+
+  .email-button[data-email-state="revealed"] .email-copy-ui,
+  .email-button[data-email-state="copied"] .email-copy-ui {
+    display: none;
   }
 
   .hero-actions .share-button.primary-pill {

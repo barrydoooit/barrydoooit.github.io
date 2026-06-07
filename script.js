@@ -21,6 +21,7 @@ const scholarProfileUrl = "https://scholar.google.com/citations?user=_ucq1RcAAAA
 const scholarCitationBase = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_ucq1RcAAAAJ&citation_for_view=";
 const emailChars = [66, 46, 89, 46, 68, 105, 110, 103, 64, 116, 117, 100, 101, 108, 102, 116, 46, 110, 108];
 let emailCopiedTimer;
+const mobileEmailLabelQuery = window.matchMedia?.("(max-width: 760px)");
 
 function getEmailAddress() {
   return String.fromCharCode(...emailChars);
@@ -28,6 +29,15 @@ function getEmailAddress() {
 
 function getDisplayEmail() {
   return getEmailAddress();
+}
+
+function getEmailButtonLabel() {
+  return mobileEmailLabelQuery?.matches ? "Email" : getDisplayEmail();
+}
+
+function updateEmailButtonLabel() {
+  if (!emailButton || !emailLabel || emailButton.dataset.emailState === "hidden") return;
+  emailLabel.textContent = getEmailButtonLabel();
 }
 
 function updateHeroGradientStops() {
@@ -251,7 +261,7 @@ function revealEmailButton() {
   window.clearTimeout(emailCopiedTimer);
   emailButton.dataset.emailState = "revealed";
   emailButton.setAttribute("aria-label", "Copy email address");
-  emailLabel.textContent = getDisplayEmail();
+  emailLabel.textContent = getEmailButtonLabel();
 }
 
 function playEmailJumpAnimation() {
@@ -434,13 +444,15 @@ if (emailButton && emailLabel) {
     emailCopiedTimer = window.setTimeout(() => {
       emailButton.dataset.emailState = "revealed";
       emailButton.setAttribute("aria-label", "Copy email address");
-      emailLabel.textContent = getDisplayEmail();
+      emailLabel.textContent = getEmailButtonLabel();
     }, 1200);
   });
 
   emailButton.addEventListener("animationend", () => {
     emailButton.classList.remove("is-jumping");
   });
+
+  mobileEmailLabelQuery?.addEventListener("change", updateEmailButtonLabel);
 }
 
 if (contactEmailButton) {

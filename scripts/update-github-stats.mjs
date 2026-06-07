@@ -70,18 +70,25 @@ if (!collection) {
   throw new Error(`GitHub user not found or inaccessible: ${username}`);
 }
 
-const repositories = collection.commitContributionsByRepository.map((entry) => ({
-  nameWithOwner: entry.repository.nameWithOwner,
-  isPrivate: entry.repository.isPrivate,
-  url: entry.repository.isPrivate ? null : entry.repository.url,
-  commitCount: entry.contributions.totalCount,
-}));
+const repositories = collection.commitContributionsByRepository
+  .filter((entry) => !entry.repository.isPrivate)
+  .map((entry) => ({
+    nameWithOwner: entry.repository.nameWithOwner,
+    isPrivate: false,
+    url: entry.repository.url,
+    commitCount: entry.contributions.totalCount,
+  }));
+
+const privateCommitCount = collection.commitContributionsByRepository
+  .filter((entry) => entry.repository.isPrivate)
+  .reduce((total, entry) => total + entry.contributions.totalCount, 0);
 
 const stats = {
   username,
   from: from.toISOString(),
   to: to.toISOString(),
   commitCountLast30Days: collection.totalCommitContributions,
+  privateCommitCountLast30Days: privateCommitCount,
   restrictedContributionsLast30Days: collection.restrictedContributionsCount,
   generatedAt: new Date().toISOString(),
   source: "github-graphql-contributions",

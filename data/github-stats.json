@@ -1,10 +1,22 @@
 {
   "username": "barrydoooit",
-  "from": null,
-  "to": null,
-  "commitCountLast30Days": null,
-  "restrictedContributionsLast30Days": null,
-  "generatedAt": null,
-  "source": "placeholder",
-  "repositories": []
+  "from": "2026-05-08T16:05:48.431Z",
+  "to": "2026-06-07T16:05:48.431Z",
+  "commitCountLast30Days": 2,
+  "privateCommitCountLast30Days": 0,
+  "restrictedContributionsLast30Days": 0,
+  "generatedAt": "2026-06-07T16:05:48.831Z",
+  "source": "github-graphql-contributions",
+  "rateLimit": {
+    "remaining": 4981,
+    "resetAt": "2026-06-07T16:34:19Z"
+  },
+  "repositories": [
+    {
+      "nameWithOwner": "barrydoooit/barrydoooit.github.io",
+      "isPrivate": false,
+      "url": "https://github.com/barrydoooit/barrydoooit.github.io",
+      "commitCount": 2
+    }
+  ]
 }

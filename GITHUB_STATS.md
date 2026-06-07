@@ -2,6 +2,8 @@
 
 The homepage reads `data/github-stats.json` for the GitHub summary card. A GitHub Actions workflow can update that file every day without exposing any token to browser JavaScript.
 
+The stats script counts raw authored commits from the last 30 days across all branches in owner repositories that the token can access. This is intentionally different from GitHub profile contributions, which only count contribution-eligible branches.
+
 ## Private-inclusive contribution setup
 
 Create a fine-grained personal access token and store it as the repository secret `GH_STATS_TOKEN`.

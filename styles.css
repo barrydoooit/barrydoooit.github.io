@@ -1532,6 +1532,7 @@ h2 {
   .email-button,
   .hero-actions .share-button.primary-pill {
     height: 34px;
+    min-height: 34px;
     padding: 6px 14px 7px;
     font-size: 15px;
   }
@@ -1690,6 +1691,7 @@ h2 {
   .email-button,
   .hero-actions .share-button.primary-pill {
     height: 31px;
+    min-height: 31px;
     padding: 5px 11px 6px;
     font-size: 14px;
   }

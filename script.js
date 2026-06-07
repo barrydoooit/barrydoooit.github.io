@@ -9,7 +9,6 @@ const productHero = document.querySelector(".product-hero");
 const heroDescriptionText = document.querySelector(".hero-subline span");
 const githubCommitValue = document.querySelector("[data-github-commits]");
 const githubCommitLabel = document.querySelector("[data-github-commit-label]");
-const eventRail = document.querySelector(".event-grid");
 const updateDateLabel = document.querySelector("[data-update-date]");
 const contactEmailButton = document.querySelector("[data-contact-email]");
 const publicationSearch = document.querySelector("[data-publication-search]");
@@ -287,84 +286,6 @@ function playEmailJumpAfterTopScroll() {
   window.requestAnimationFrame(waitForTop);
 }
 
-function enableDragScroll(rail) {
-  let isPointerDown = false;
-  let isDragging = false;
-  let startX = 0;
-  let startY = 0;
-  let startScrollLeft = 0;
-  let activePointerId = null;
-  let suppressNextClick = false;
-
-  function endDrag() {
-    if (!isPointerDown) return;
-
-    if (activePointerId !== null && rail.hasPointerCapture?.(activePointerId)) {
-      rail.releasePointerCapture(activePointerId);
-    }
-
-    if (isDragging) {
-      suppressNextClick = true;
-      window.setTimeout(() => {
-        suppressNextClick = false;
-      }, 120);
-    }
-
-    isPointerDown = false;
-    isDragging = false;
-    activePointerId = null;
-    rail.classList.remove("is-pointer-down", "is-dragging");
-  }
-
-  rail.addEventListener("pointerdown", (event) => {
-    if (event.pointerType === "touch") return;
-    if (event.button !== 0) return;
-
-    isPointerDown = true;
-    isDragging = false;
-    activePointerId = event.pointerId;
-    startX = event.clientX;
-    startY = event.clientY;
-    startScrollLeft = rail.scrollLeft;
-    rail.classList.add("is-pointer-down");
-  });
-
-  rail.addEventListener("pointermove", (event) => {
-    if (!isPointerDown) return;
-
-    const deltaX = event.clientX - startX;
-    const deltaY = event.clientY - startY;
-
-    if (!isDragging) {
-      if (Math.abs(deltaX) < 7) return;
-      if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
-
-      isDragging = true;
-      rail.setPointerCapture?.(event.pointerId);
-      rail.classList.add("is-dragging");
-    }
-
-    rail.scrollLeft = startScrollLeft - deltaX;
-    event.preventDefault();
-  });
-
-  rail.addEventListener("pointerup", endDrag);
-  rail.addEventListener("pointercancel", endDrag);
-  rail.addEventListener("pointerleave", endDrag);
-
-  rail.addEventListener(
-    "click",
-    (event) => {
-      if (!suppressNextClick) return;
-
-      event.preventDefault();
-      event.stopPropagation();
-      suppressNextClick = false;
-    },
-    true
-  );
-}
-
 if (toggleButton && collapsible) {
   toggleButton.addEventListener("click", () => {
     const isCollapsed = collapsible.classList.toggle("collapsed");
@@ -481,10 +402,6 @@ if (publicationSearch) {
   });
 } else {
   renderPublications(publications);
-}
-
-if (eventRail) {
-  enableDragScroll(eventRail);
 }
 
 if (updateDateLabel) {

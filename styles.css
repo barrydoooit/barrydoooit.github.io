@@ -1112,29 +1112,16 @@ h2 {
   overflow-y: hidden;
   overscroll-behavior-x: contain;
   scroll-padding-inline: 0 20px;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   touch-action: pan-x pan-y pinch-zoom;
-  cursor: grab;
   -webkit-overflow-scrolling: touch;
   mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 52px), transparent 100%);
 }
 
 .event-grid::-webkit-scrollbar {
   display: none;
-}
-
-.event-grid.is-pointer-down {
-  cursor: grabbing;
-}
-
-.event-grid.is-dragging {
-  scroll-snap-type: none;
-  user-select: none;
-}
-
-.event-grid.is-dragging a {
-  pointer-events: none;
 }
 
 .review-grid {

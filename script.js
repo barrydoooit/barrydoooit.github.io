@@ -307,6 +307,7 @@ function enableDragScroll(rail) {
   }
 
   rail.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "touch") return;
     if (event.button !== 0) return;
 
     isPointerDown = true;

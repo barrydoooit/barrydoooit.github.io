@@ -1727,3 +1727,114 @@ h2 {
     min-width: 0;
   }
 }
+
+@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
+  .top-links {
+    display: none;
+  }
+
+  .page-shell {
+    padding: 0 12px 70px;
+  }
+
+  .product-hero {
+    --hero-scrim-start: 124px;
+    --hero-scrim-solid: 158px;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 206px;
+    padding: 22px 14px 26px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .profile-icon {
+    width: 88px;
+  }
+
+  h1 {
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+
+  .tagline {
+    gap: 6px;
+    margin-bottom: 7px;
+    font-size: 13px;
+  }
+
+  .tud-logo-glass {
+    width: 86px;
+    height: 20px;
+  }
+
+  .tud-logo {
+    top: -18px;
+    left: -6px;
+    width: 98px;
+    height: 47px;
+  }
+
+  .price-line {
+    max-width: 22ch;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .hero-subline {
+    display: block;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .email-button,
+  .hero-actions .share-button.primary-pill {
+    height: 31px;
+    min-height: 31px;
+    padding: 5px 11px 6px;
+    font-size: 14px;
+  }
+
+  .email-button {
+    min-width: 70px;
+  }
+
+  .hero-actions .share-button.primary-pill {
+    min-width: 82px;
+  }
+
+  .email-main-icon,
+  .hero-actions .share-button.primary-pill svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .stats-strip {
+    grid-template-columns: repeat(5, 118px);
+    overflow-x: auto;
+    margin-right: -12px;
+    padding: 24px 12px 0 0;
+  }
+
+  .stats-strip article,
+  .stat-link-card {
+    grid-template-rows: 14px 22px 14px;
+    min-height: 70px;
+    padding: 0 10px;
+  }
+
+  .stat-value {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 22px;
+    font-size: 18px;
+  }
+
+  .stat-label,
+  .stat-sub {
+    font-size: 11px;
+  }
+}

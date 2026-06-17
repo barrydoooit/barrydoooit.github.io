@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barry Y. Ding - CV</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 15mm;
+    }
+
+    :root {
+      --ink: #141414;
+      --muted: #555;
+      --rule: #c8c8c8;
+      --accent: #0f4c81;
+      --soft: #f5f7fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #eceff3;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.45pt;
+      line-height: 1.36;
+    }
+
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+      background: #fff;
+      padding: 14mm 15mm;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: end;
+      padding-bottom: 8px;
+      border-bottom: 1.6px solid var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 3px 0;
+      font-size: 25pt;
+      letter-spacing: 0.1px;
+      line-height: 1.02;
+      font-weight: 700;
+    }
+
+    .also-known {
+      font-size: 11.7pt;
+      font-weight: 400;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      font-size: 10.8pt;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .tagline {
+      font-size: 10.2pt;
+      margin-top: 3px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 9.1pt;
+      line-height: 1.42;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    section { margin: 0 0 12px 0; }
+
+    .section-title {
+      font-size: 11pt;
+      letter-spacing: 0.55px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 3px;
+      margin: 0 0 6px 0;
+      line-height: 1.05;
+    }
+
+    .profile {
+      margin: 0;
+      font-size: 10.3pt;
+    }
+
+    .entry { margin-bottom: 8px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .entry-title { font-weight: 700; }
+
+    .entry-meta {
+      color: var(--muted);
+      font-size: 9.25pt;
+      white-space: nowrap;
+    }
+
+    .entry-sub {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 9.7pt;
+    }
+
+    ul {
+      margin: 4px 0 0 15px;
+      padding: 0;
+    }
+
+    li {
+      margin: 3px 0;
+      padding-left: 2px;
+    }
+
+    .pubs {
+      counter-reset: pubs;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pubs li {
+      counter-increment: pubs;
+      position: relative;
+      padding-left: 18px;
+      margin: 6px 0;
+    }
+
+    .pubs li::before {
+      content: counter(pubs) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--muted);
+      font-size: 9.25pt;
+    }
+
+    .venue {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .note-strip {
+      background: var(--soft);
+      border-left: 3.5px solid var(--accent);
+      padding: 8px 9px;
+      font-size: 9.8pt;
+      margin-top: 4px;
+    }
+
+    @media screen {
+      .page { margin: 20px auto; }
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .page {
+        width: auto;
+        height: calc(297mm - 28mm);
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>Barry Y. Ding <span class="also-known">(Yukuan Ding)</span></h1>
+        <div class="subtitle">PhD Candidate, Embedded Systems Group, Delft University of Technology</div>
+        <div class="tagline">RF/mmWave sensing for privacy-preserving human-robot interaction</div>
+      </div>
+      <div class="contact">
+        Delft, Netherlands<br>
+        <a href="mailto:Y.Ding-1@tudelft.nl">Y.Ding-1@tudelft.nl</a><br>
+        <a href="https://barrydoooit.github.io/">barrydoooit.github.io</a> | <a href="https://github.com/barrydoooit">GitHub</a> | <a href="https://scholar.google.com/citations?user=_ucq1RcAAAAJ">Scholar</a>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Research Profile</h2>
+      <p class="profile">PhD candidate working on RF/mmWave sensing for privacy-preserving human activity perception and human-robot interaction. Current research studies how sparse radar measurements can support activity, gesture, and pose understanding in interactive systems without camera-based perception.</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Delft University of Technology, Netherlands</div>
+          <div class="entry-meta">2023 - present</div>
+        </div>
+        <div class="entry-sub">PhD Candidate, Embedded Systems Group. Supervisors: Prof. Koen Langendoen and Dr. Marco Zuniga Zamalloa.</div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">The Hong Kong University of Science and Technology, Hong Kong SAR</div>
+          <div class="entry-meta">2022 - 2023</div>
+        </div>
+        <div class="entry-sub">MSc in Information Technology.</div>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">The Hong Kong Polytechnic University, Hong Kong SAR</div>
+          <div class="entry-meta">2018 - 2022</div>
+        </div>
+        <div class="entry-sub">BSc in Computing / Computer Science, First Class Honours; Dean's Honours List 2020 - 2021.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Selected Publications</h2>
+      <ol class="pubs">
+        <li><strong>Y. Ding</strong>, H. Martinez, G. Vaidya, K. Langendoen, M. Zuniga Zamalloa. "Towards Device-Free Gaming with mmWave Radar." <span class="venue">IEEE PerCom</span>, 2026. <span style="color:#555;">Artifact Certified.</span></li>
+        <li>T. Li, <strong>Y. Ding</strong>, J. Liang, K. Zheng, X. Zhang, T. Pan, D. Wang, K. Xu. "Toward Optimal Broadcast Mode in Offline Finding Network." <span class="venue">IEEE Transactions on Mobile Computing</span>, 24(7):6550-6565, 2025.</li>
+        <li>T. Li, J. Liang, <strong>Y. Ding</strong>, K. Zheng, X. Zhang, K. Xu. "On Design and Performance of Offline Finding Network." <span class="venue">IEEE INFOCOM</span>, 2023.</li>
+        <li><strong>Y. Ding</strong>, T. Li, J. Liang, D. Wang. "Blender: Toward Practical Simulation Framework for BLE Neighbor Discovery." <span class="venue">ACM MSWiM</span>, 2022.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="section-title">Research Experience</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">PhD Research - RF/mmWave Sensing for Human-Robot Interaction</div>
+          <div class="entry-meta">2023 - present</div>
+        </div>
+        <ul>
+          <li>Develop privacy-preserving RF/mmWave sensing systems for human activity perception and interactive human-robot scenarios.</li>
+          <li>Investigate radar-based perception pipelines for device-free interaction, with emphasis on activity, gesture, and body-motion understanding from sparse RF measurements.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Earlier Research & Industry Experience</div>
+          <div class="entry-meta">2021 - 2023</div>
+        </div>
+        <ul>
+          <li>Wireless sensing and localization: BLE neighbor discovery, offline finding networks, BLE/Wi-Fi fingerprints, and LoRa/RSSI urban localization.</li>
+          <li>Networked systems: distributed-machine-learning network measurement and application-layer video-streaming adaptation.</li>
+          <li>Industry internship: commercial iOS development.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Research &amp; Technical Competencies</h2>
+      <div class="note-strip">RF/mmWave sensing; radar point-cloud perception; activity, gesture, and pose understanding; privacy-preserving HRI; BLE/LoRa-based wireless sensing and localization; Python/PyTorch and Java for research implementation.</div>
+    </section>
+  </main>
+</body>
+</html>

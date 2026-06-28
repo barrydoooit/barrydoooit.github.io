@@ -1,14 +1,14 @@
 {
   "username": "barrydoooit",
-  "from": "2026-05-28T06:36:28.875Z",
-  "to": "2026-06-27T06:36:28.875Z",
-  "commitCountLast30Days": 80,
+  "from": "2026-05-29T07:10:14.147Z",
+  "to": "2026-06-28T07:10:14.147Z",
+  "commitCountLast30Days": 54,
   "publicCommitCountLast30Days": 14,
-  "privateCommitCountLast30Days": 66,
-  "generatedAt": "2026-06-27T06:36:50.276Z",
+  "privateCommitCountLast30Days": 40,
+  "generatedAt": "2026-06-28T07:10:28.752Z",
   "source": "github-rest-all-branches",
-  "repositoryCount": 25,
-  "branchCount": 58,
+  "repositoryCount": 23,
+  "branchCount": 47,
   "repositories": [
     {
       "nameWithOwner": "barrydoooit/barrydoooit.github.io",

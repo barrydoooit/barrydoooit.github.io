@@ -1,20 +1,13 @@
 {
   "username": "barrydoooit",
-  "from": "2026-08-31T09:42:10.404Z",
-  "to": "2026-09-30T09:42:10.404Z",
-  "commitCountLast30Days": 189,
-  "publicCommitCountLast30Days": 1,
-  "privateCommitCountLast30Days": 188,
-  "generatedAt": "2026-09-30T09:42:36.185Z",
+  "from": "2026-09-01T10:08:16.430Z",
+  "to": "2026-10-01T10:08:16.430Z",
+  "commitCountLast30Days": 170,
+  "publicCommitCountLast30Days": 0,
+  "privateCommitCountLast30Days": 170,
+  "generatedAt": "2026-10-01T10:08:36.257Z",
   "source": "github-rest-all-branches",
   "repositoryCount": 28,
   "branchCount": 54,
-  "repositories": [
-    {
-      "nameWithOwner": "barrydoooit/tower-zeta6-usermanual",
-      "isPrivate": false,
-      "url": "https://github.com/barrydoooit/tower-zeta6-usermanual",
-      "commitCount": 1
-    }
-  ]
+  "repositories": []
 }
